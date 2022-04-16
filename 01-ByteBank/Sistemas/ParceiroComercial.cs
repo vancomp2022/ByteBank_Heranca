@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _01_ByteBank.Sistemas
 {
-    public class ParceiroComercial
+    public class ParceiroComercial: IAutenticavel
     {
         public string Senha { get; set; }
-        public bool Autenticar (string senha)
+        public virtual bool Autenticar (string senha)
         {
             return Senha == senha;
         }

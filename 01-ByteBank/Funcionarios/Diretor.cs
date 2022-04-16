@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _01_ByteBank.Funcionarios
 {
-    public class Diretor : Autenticar
+    public class Diretor : FuncionarioAutenticavel    
     {
         public string Senha { get; set; }
         public Diretor(string CPF) : base(20000, CPF) { 
@@ -26,7 +26,7 @@ namespace _01_ByteBank.Funcionarios
 
         public bool Autenticar(string senha)
         {
-            return Senha == senha;
+            return true;
                
         }
 

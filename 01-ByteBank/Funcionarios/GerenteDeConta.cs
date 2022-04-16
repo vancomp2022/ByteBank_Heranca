@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _01_ByteBank.Funcionarios
 {
-    public class GerenteDeConta : Autenticar
+    public class GerenteDeConta : FuncionarioAutenticavel
     {
         public GerenteDeConta(string CPF) : base(4000, CPF) { 
         Console.WriteLine("Criando Gerente de Conta." + CPF);
@@ -21,10 +21,10 @@ namespace _01_ByteBank.Funcionarios
            return Salario * 0.25;
         }
 
-        public override void AumentarSalario()
+     /*   public void AumentarSalario()
         {
             Salario *= 1.05;
-        }
+        }*/
 
         public bool Autenticar(string senha)
         {
@@ -32,6 +32,9 @@ namespace _01_ByteBank.Funcionarios
 
         }
 
-
+       /* public override void AumentarSalario()
+        {
+            Salario *= 1.05;
+        }*/
     }
 }

@@ -7,22 +7,26 @@ using System.Threading.Tasks;
 
 namespace _01_ByteBank.Sistemas
 {
-    public class Autenticar : Funcionario
-    {
-        private int v;
-        private string cPF;
+    public interface IAutenticavel {
+        //private string CPF;
 
-        public Autenticar(int v, string cPF)
+        public void Autenticavel(int v, string CPF)
         {
             this.v = v;
-            this.cPF = cPF;
+            this.CPF = CPF;
         }
 
+        public void Autenticavel(double salario, string cpf)
+            //: base(salario, cpf)
+        {
+
+        }
         public string Senha { get; set; }
 
         public static bool Autenticar(string senha)
         {
-            return Senha == senha ;   
+            return true;
         }
-    }
+    } 
+    
 }

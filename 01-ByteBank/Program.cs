@@ -2,7 +2,6 @@
 //Console.WriteLine("Hello, World!");
 using _01_ByteBank.Funcionarios;
 using ByteBank_Parte3.Funcionarios;
-using _01_ByteBank;
 using _01_ByteBank.Sistemas;
 
 namespace _ByteBank_Parte3
@@ -14,10 +13,9 @@ namespace _ByteBank_Parte3
             //
             //CalcularBonificacao();
 
-            UsarSistema(
-            SistemaInterno);
+            /*UsarSistema(SistemaInterno);
 
-            Console.ReadLine();
+            Console.ReadLine();*/
 
             /*   carlos.Nome = "Carlos";
                //carlos.Salario = 2000;
@@ -83,12 +81,18 @@ namespace _ByteBank_Parte3
             roberta.Senha = "123";
 
             GerenteDeConta camila = new GerenteDeConta("4251");
-            camila.Nome = "Camila';
+            camila.Nome = "Camila";
             camila.Senha = "123" ;
 
             Funcionario pedro = new Designer("833.555.777.-99");
             pedro.Nome = "Pedro";
-            sistemaInterno.Logar(pedro, "djfadsoif");
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+                        
+            //sistemaInterno.Logar(pedro, "djfadsoif");
+            sistema.Logar(parceiro, "123456");
+
             sistema.Logar(roberta, "123");
             sistema.Logar(camila, "sbc");
         }
